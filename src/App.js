@@ -3,8 +3,11 @@ import { IdCard } from "./Components/idCard";
 import { Random } from "./Components/Random";
 import { BoxColor } from "./Components/BoxColor";
 import { CreditCard } from "./Components/CreditCard";
-import visa from "./assets/images/visa.png"
-import master from "./assets/images/master-card.svg"
+import { ClickablePicture } from "./Components/ClickablePicture";
+import { Rating } from "./Components/Rating";
+import { LikeButton } from "./Components/LikeButton";
+import maxence from "./assets/images/maxence.png";
+import maxenceGlasses from "./assets/images/maxence-glasses.png";
 
 import "./index.css"
 
@@ -82,9 +85,29 @@ function App() {
       bank="Name of the Bank"
       owner="Firstname Lastname"
       bgColor="#ddbb55"
-      color="white" 
+      color="white"
     />
 
+    <h1 className="id">ClickablePicture</h1>
+
+    <ClickablePicture
+      img={maxence}
+      imgClicked={maxenceGlasses}
+    />
+
+    <h1 className="id">Rating</h1>
+
+    <Rating>0</Rating><br/>
+    <Rating>1.49</Rating><br/>
+    <Rating>1.5</Rating><br/>
+    <Rating>3</Rating><br/>
+    <Rating>4</Rating><br/>
+    <Rating>5</Rating><br/>
+
+    <h1 className="id">LikeButton</h1>
+
+    <LikeButton />
+    
     </div>
   );
 }
